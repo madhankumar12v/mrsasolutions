@@ -2029,3 +2029,44 @@ p, li { font-size: 1rem; }
   .hero h1 { font-size: 1.9rem; }
   .whatsapp-float { padding: 10px 12px; font-size: .9rem; }
 }
+
+
+/* Portfolio image visibility and consistent preview sizing */
+#portfolio .isotope-container {
+  min-height: 220px;
+}
+#portfolio .portfolio-item {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+}
+#portfolio .portfolio-item > img {
+  display: block !important;
+  width: 100% !important;
+  height: 245px;
+  min-height: 220px;
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+  background: #f5f8f6;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#portfolio .portfolio-item .portfolio-info {
+  position: relative;
+  inset: auto;
+  opacity: 1;
+  visibility: visible;
+}
+#portfolio .portfolio-item .portfolio-info h4,
+#portfolio .portfolio-item .portfolio-info p {
+  color: var(--default-color);
+}
+@media (max-width: 767px) {
+  #portfolio .portfolio-item > img {
+    height: 225px;
+    min-height: 200px;
+  }
+}
