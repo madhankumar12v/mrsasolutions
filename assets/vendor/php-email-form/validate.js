@@ -6,7 +6,9 @@
 (function () {
   "use strict";
 
-  let forms = document.querySelectorAll('.php-email-form');
+  // The main contact form uses its own Formspree handler in index.html.
+  // Exclude it here to prevent two submit handlers sending the same message.
+  let forms = document.querySelectorAll('.php-email-form:not(#contact-form)');
 
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
